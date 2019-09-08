@@ -1,0 +1,44 @@
+set tabstop =2 
+set shiftwidth=2
+set term=screen-256color
+filetype indent on
+set number
+set smartindent
+autocmd BufRead,BufWritePre *.sh normal gg=G
+syntax enable
+
+
+set nocompatible 
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'valloric/youcompleteme'
+
+call vundle#end()
+
+call plug#begin()
+	Plug 'w0ng/vim-hybrid'
+  Plug 'sickill/vim-monokai'
+	Plug 'raimondi/delimitmate'
+	Plug 'nlknguyen/papercolor-theme'
+	Plug 'nathanaelkane/vim-indent-guides'
+  Plug 'valloric/youcompleteme'
+	Plug 'scrooloose/nerdtree'
+	Plug 'scrooloose/syntastic'
+	Plug 'vim-pandoc/vim-rmarkdown'	
+	Plug 'vim-pandoc/vim-pandoc-syntax'
+	Plug 'vim-pandoc/vim-pandoc'
+	Plug 'ajh17/spacegray.vim'
+	Plug 'lifepillar/vim-solarized8'
+	Plug 'flazz/vim-colorschemes'
+	Plug 'altercation/vim-colors-solarized'
+	Plug 'joshdick/onedark.vim'
+	Plug 'morhetz/gruvbox'
+	Plug 'dracula/vim'
+call plug#end()
+
+
+let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
+let g:ycm_show_diagnostics_ui = 0 
+colorscheme onedark 
